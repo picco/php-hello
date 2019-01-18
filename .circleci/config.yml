@@ -5,4 +5,7 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "A first hello"
+      - store_artifacts:
+          path: /index.php
+          destination: index.php
+      - run: echo "A first hello"      
