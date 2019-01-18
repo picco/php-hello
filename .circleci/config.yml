@@ -15,4 +15,4 @@ jobs:
           path: /index.php
           destination: index.php
       - run: |
-          gsutil cp index.php gs://fenomen-deploytest
+          gsutil cp index.php gs://fenomen-deploytest/builds/project/sha
