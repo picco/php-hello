@@ -12,4 +12,4 @@ jobs:
           gsutil
       - checkout
       - run: |
-          gsutil cp -r index.php gs://fenomen-deploytest/builds/project/sha
+          echo "great success!"
