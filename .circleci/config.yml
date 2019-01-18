@@ -14,4 +14,5 @@ jobs:
       - store_artifacts:
           path: /index.php
           destination: index.php
-      - run: echo "A first hello"      
+      - run: |
+          gsutil cp index.php gs://deploytest
