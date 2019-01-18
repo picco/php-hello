@@ -11,8 +11,5 @@ jobs:
           gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}    
           gsutil
       - checkout
-      - store_artifacts:
-          path: /index.php
-          destination: index.php
       - run: |
           gsutil cp -r index.php gs://fenomen-deploytest/builds/project/sha
