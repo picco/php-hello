@@ -15,4 +15,5 @@ jobs:
           echo "great success!"
       - run: |      
           ssh-keyscan console.fenomen.ee >> ~/.ssh/known_hosts
-          scp -r ./* dev@console.fenomen.ee:/mnt/dev/www/deployments/php-hello/
+          ssh dev@console.ee 'mkdir -p /mnt/dev/www/deployments/{CIRCLE_PROJECT_REPONAME}/{CIRCLE_BRANCH}/build-{CIRLE_BUILD_NUM}-{CIRCLE_SHA1}/'
+          scp -r ./* dev@console.fenomen.ee:/mnt/dev/www/deployments/{CIRCLE_PROJECT_REPONAME}/{CIRCLE_BRANCH}/build-{CIRLE_BUILD_NUM}-{CIRCLE_SHA1}/
