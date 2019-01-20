@@ -14,7 +14,7 @@ jobs:
           gsutil
       - checkout
       - run: |
-          echo "great success!"
+          echo ${DESTINATION}
       - run: |      
           ssh-keyscan console.fenomen.ee >> ~/.ssh/known_hosts
           ssh dev@console.fenomen.ee "mkdir -p ${DESTINATION}"
