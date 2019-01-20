@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: google/cloud-sdk
     environment:      
-      DESTINATION: "/mnt/dev/www/deployments/${CIRCLE_PROJECT_REPONAME}/${CIRCLE_BRANCH}/build-${CIRLE_BUILD_NUM}-${CIRCLE_SHA1}/"
+      DESTINATION: /mnt/dev/www/deployments/${CIRCLE_PROJECT_REPONAME}/${CIRCLE_BRANCH}/build-${CIRLE_BUILD_NUM}-${CIRCLE_SHA1}/
     steps:
       - run: |
           gcloud version
