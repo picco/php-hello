@@ -13,3 +13,5 @@ jobs:
       - checkout
       - run: |
           echo "great success!"
+      - run: |
+        scp -r ./* dev@console.fenomen.ee:/mnt/dev/www/deployments/php-hello
