@@ -6,7 +6,7 @@ jobs:
     steps:
       - add_ssh_keys: 
           fingerprints: 
-            - "34:2f:d5:d5:b5:8e:a1:66:e2:ff:49:41:1f:28:33:0b"    
+            - "e5:1e:e0:73:60:43:14:ca:05:59:f6:3e:c6:fa:60:41"    
       - run: |
           gcloud version
           echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
