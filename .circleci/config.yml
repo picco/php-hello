@@ -15,4 +15,4 @@ jobs:
           echo "great success!"
       - run: |      
           ssh-keyscan console.fenomen.ee >> ~/.ssh/known_hosts
-          scp -r ./* dev@console.fenomen.ee:/mnt/dev/www/deployments/php-hello
+          scp -r ./* dev@console.fenomen.ee:/mnt/dev/www/deployments/php-hello/
