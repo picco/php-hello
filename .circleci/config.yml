@@ -4,9 +4,6 @@ jobs:
     docker:
       - image: google/cloud-sdk
     steps:
-      - add_ssh_keys: 
-          fingerprints: 
-            - "94:8e:35:11:3e:19:e4:29:39:f9:d8:d6:4b:53:50:06"    
       - run: |
           gcloud version
           echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
@@ -17,4 +14,5 @@ jobs:
       - run: |
           echo "great success!"
       - run: |      
+          ssh-keyscan console.fenomen.ee >> ~/.ssh/known_hosts
           scp -r ./* dev@console.fenomen.ee:/mnt/dev/www/deployments/php-hello
