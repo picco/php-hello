@@ -3,5 +3,5 @@ steps:
   args: ['ls']
 artifacts:
   objects:
-    location: 'gs://fenomen-deploytest/gcloud-build-test/$PROJECT_ID/$BRANCH_NAME/$SHORT_SHA'
+    location: 'gs://fenomen-deploytest/gcloud-build-test/$REPO_NAME/$BRANCH_NAME/'
     paths: ['index.php']
