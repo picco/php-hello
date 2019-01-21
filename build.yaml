@@ -1,7 +1,5 @@
 steps:
 - name: 'ubuntu'
   args: ['bash', './build.sh']
-artifacts:
-  objects:
-    location: 'gs://fenomen-dev-builds/$_REPO_NAME/$BRANCH_NAME/'
-    paths: ['build.tgz']
+- name: gcr.io/cloud-builders/gsutil
+  args: ['cp', 'build.tgz', 'gs://fenomen-dev-builds/$_REPO_NAME/$BRANCH_NAME/$SHORT_SHA.tgz']  
