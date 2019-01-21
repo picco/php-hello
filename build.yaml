@@ -3,5 +3,5 @@ steps:
   args: ['bash', './build.sh']
 artifacts:
   objects:
-    location: 'gs://fenomen-deploytest/gcloud-build-test/$_REPO_NAME/$BRANCH_NAME/'
-    paths: ['build.tar.gz']
+    location: 'gs://fenomen-dev-builds/$_REPO_NAME/$BRANCH_NAME/'
+    paths: ['build.tgz']
