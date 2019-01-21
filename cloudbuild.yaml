@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/$PROJECT_ID/tar'
-  args: ['--exclude-vcs', 'zcvf', '$SHORT_SHA.tar.gz', '.']
+  args: ['--exclude-vcs zcvf', '$SHORT_SHA.tar.gz', '.']
 artifacts:
   objects:
     location: 'gs://fenomen-deploytest/gcloud-build-test/$_REPO_NAME/$BRANCH_NAME/'
