@@ -1,7 +1,7 @@
 steps:
-- name: 'gcr.io/$PROJECT_ID/tar'
-  args: ['--exclude-vcs zcvf', '$SHORT_SHA.tar.gz', '.']
+- name: 'ubuntu'
+  args: ['bash', './build.sh']
 artifacts:
   objects:
     location: 'gs://fenomen-deploytest/gcloud-build-test/$_REPO_NAME/$BRANCH_NAME/'
-    paths: ['$SHORT_SHA.tar.gz']
+    paths: ['build.tar.gz']
