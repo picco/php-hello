@@ -1,3 +1,3 @@
 rm -fr .git
-tar zcvf build.tar .
+tar zcvf build.tgz .
 ls
