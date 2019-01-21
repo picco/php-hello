@@ -1,7 +1,7 @@
 steps:
 - name: 'ubuntu'
-  args: ['ls']
+  args: ['tar -zcvf $SHORT_SHA.tar.gz . ']
 artifacts:
   objects:
     location: 'gs://fenomen-deploytest/gcloud-build-test/$_REPO_NAME/$BRANCH_NAME/'
-    paths: ['index.php']
+    paths: ['$SHORT_SHA.tar.gz']
